@@ -14,8 +14,8 @@
     <style type="text/css">
       .card-wrapper{
         width: 100%;
-        /*display: flex;
-        flex-wrap: wrap;*/
+        display: flex;
+        flex-wrap: wrap;
       }
       .add-remove-menu{
         background-color: #1e88e5;
@@ -28,12 +28,7 @@
          margin: 2rem;
          background-color: #1e88e5;
       }
-      .nocard{
-         height: 500px;
-         width: 500px;
-         margin: 2rem;
-         background-color: #fff;
-      }
+      
       input[type="button"]
       {
         width: 46.5%;
@@ -53,9 +48,9 @@
         <img src="img/acm-nav.png" style="width: 150px;" class="responsive-img">
       </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+        <li><a href="#">Sass</a></li>
+        <li><a href="#">Components</a></li>
+        <li><a href="#">JavaScript</a></li>
       </ul>
     </div>
   </nav><br><br>
@@ -72,14 +67,24 @@
   </div>
   <script type="text/javascript">
     $(document).ready(function(){
-      $("#btn1").click(function(){
-        $(".card-wrapper").removeClass("nocard").addClass("card");
-        //$(".card-wrapper").append("<style>height:500px;width: 500px;margin: 2rem;background-color: #1e88e5;<style>");
+
+      //var1="<div style=height: 500px;width: 500px;margin: 2rem;background-color: #1e88e5;</style>"
+      var2="<p class='card'></p>";
+
+        $("#btn1").click(function(){
+          $(".card-wrapper").append(var2);
+        //$(".card-wrapper").removeClass("nocard").addClass("card");
+        //$(".card-wrapper").addClass("card");
+        // $(".card-wrapper").append(function(){
+        //   $(".card-wrapper").addClass("card");
+        // });
+        //$(".card-wrapper").after(content,function(index){});
         });
 
       $("#btn2").click(function(){
-        $(".card-wrapper").removeClass("card").addClass("nocard");
+        //$("#card-holder").last().removeClass("card");//.addClass("nocard");
         //$(".card-wrapper").append("blablabla");
+        $("p").last().removeClass("card");
 
       });
 
