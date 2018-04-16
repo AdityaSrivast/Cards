@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Infinite Cards</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <!--cdn for MATERIALIZE-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <!--cdn for materialize end-->
+  <!--jquery cdn google-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+      .card-wrapper{
+        width: 100%;
+        /*display: flex;
+        flex-wrap: wrap;*/
+      }
+      .add-remove-menu{
+        background-color: #1e88e5;
+        width: 80%;
+        margin: 0 auto;
+      }
+      .card{
+         height: 500px;
+         width: 500px;
+         margin: 2rem;
+         background-color: #1e88e5;
+      }
+      .nocard{
+         height: 500px;
+         width: 500px;
+         margin: 2rem;
+         background-color: #fff;
+      }
+      input[type="button"]
+      {
+        width: 46.5%;
+        margin:1em;
+        padding:0.7em;
+        border-radius: 1px;
+        background-color: #fff;
+      }
+    </style>
+   
+</head>
+<body>
+  <!--navigation bar-->
+  <nav style="background-color: #1e88e5">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">
+        <img src="img/acm-nav.png" style="width: 150px;" class="responsive-img">
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav><br><br>
+  <!--navigation bar end-->
+  <div class="add-remove-menu">
+    <input type="button" name="add-card"  id="btn1"  value="Add Card">
+    <input type="button" name="remove-card" id="btn2" value="Remove Card">
+
+  </div>
+  <div class="card-wrapper">
+    <!--<div id="card-holder">-->
+    
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#btn1").click(function(){
+        $(".card-wrapper").removeClass("nocard").addClass("card");
+        //$(".card-wrapper").append("<style>height:500px;width: 500px;margin: 2rem;background-color: #1e88e5;<style>");
+        });
+
+      $("#btn2").click(function(){
+        $(".card-wrapper").removeClass("card").addClass("nocard");
+        //$(".card-wrapper").append("blablabla");
+
+      });
+
+    //});
+    // function remove()
+    // {
+    //$(".card-wrapper").removeClass("card");
+
+    //     // jQuery methods go here...
+
+    //   });
+
+    // }
+    });
+  </script>
+
+</body>
+</html>
