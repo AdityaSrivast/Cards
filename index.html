@@ -11,45 +11,16 @@
   <!--jquery cdn google-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <style type="text/css">
-      .card-wrapper{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .add-remove-menu{
-        background-color: #1e88e5;
-        width: 80%;
-        margin: 0 auto;
-      }
-      .card{
-         height: 200px;
-         width: 200px;
-         margin: 2rem;
-         background-color: #1e88e5;
-      }
-      .button-wrap{
-        display: flex;
-        justify-content: center;
-      }
-      
-      input[type="button"]
-      {
-        width: 47%;
-        margin:1rem;
-        padding:0.7em;
-        border-radius: 1px;
-        background-color: #fff;
-      }
-    </style>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/script.js"></script>
    
 </head>
 <body>
   <!--navigation bar-->
-  <nav style="background-color: #1e88e5">
+  <nav class="nav-bg-color">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">
-        <img src="img/acm-nav.png" style="width: 150px;" class="responsive-img">
+        <img src="img/acm-nav.png" class="responsive-img nav-logo-width">
       </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="#">Sass</a></li>
@@ -59,6 +30,7 @@
     </div>
   </nav><br><br>
   <!--navigation bar end-->
+
   <div class="add-remove-menu">
     <div class="button-wrap">
       <input type="button" name="add-card"  id="btn1"  value="Add Card">
@@ -66,46 +38,7 @@
     </div>
 
   </div>
-  <div class="card-wrapper">
-    <!--<div id="card-holder">-->
-    
-    </div>
-  </div>
-  <script type="text/javascript">
-    $(document).ready(function(){
-
-      //var1="<div style=height: 500px;width: 500px;margin: 2rem;background-color: #1e88e5;</style>"
-      var2="<p class='card'></p>";
-
-        $("#btn1").click(function(){
-          $(".card-wrapper").append(var2);
-        //$(".card-wrapper").removeClass("nocard").addClass("card");
-        //$(".card-wrapper").addClass("card");
-        // $(".card-wrapper").append(function(){
-        //   $(".card-wrapper").addClass("card");
-        // });
-        //$(".card-wrapper").after(content,function(index){});
-        });
-
-      $("#btn2").click(function(){
-        //$("#card-holder").last().removeClass("card");//.addClass("nocard");
-        //$(".card-wrapper").append("blablabla");
-        $("p").last().remove();
-
-      });
-
-    //});
-    // function remove()
-    // {
-    //$(".card-wrapper").removeClass("card");
-
-    //     // jQuery methods go here...
-
-    //   });
-
-    // }
-    });
-  </script>
+  <div class="card-wrapper"></div>
 
 </body>
 </html>
