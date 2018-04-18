@@ -1,7 +1,8 @@
 .card-wrapper{
+        margin-left: 10%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
       }
 .add-remove-menu{
   background-color: #1e88e5;
